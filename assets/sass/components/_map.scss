@@ -1,0 +1,17 @@
+.map {
+	margin-top: 100px;
+	
+	svg {
+		#Appalachian_Trail .st0 {
+			stroke: rgba(255, 255, 255, .7);
+		}
+		
+		.st0 {
+			stroke-width: 4;
+			
+			&:hover {
+				stroke: orange;
+			}
+		}
+	}
+}
