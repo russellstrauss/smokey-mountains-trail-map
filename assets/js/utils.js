@@ -82,6 +82,10 @@
 
 			},
 			
+			formatID: function(id) {
+				return id.replace(/_/g , ' ');
+			},
+			
 			secondsToMilliseconds: function(seconds) {
 				return seconds * 1000;
 			},
