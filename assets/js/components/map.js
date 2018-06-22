@@ -55,10 +55,10 @@ module.exports = function() {
 					"description": "Panoramic Views / Flame Azaleas / Old Growth Forest"
 				},
 				{  
-					"name": "Wolf Ridge Trail 1", // remove 1 and fix svg
+					"name": "Wolf Ridge Trail",
 					"id": 9,
 					"mileage": 6.3,
-					"description": ""
+					"description": "Ferns, blueberries, partial views."
 				},
 				{  
 					"name": "Twenty Mile Trail",
@@ -81,8 +81,8 @@ module.exports = function() {
 				{  
 					"name": "Lost Cove Trail",
 					"id": 13,
-					"mileage": 0,
-					"description": ""
+					"mileage": 2.7,
+					"description": "Outstanding variety of plant life as trail ascends, remnants of logging railroad."
 				},
 				{  
 					"name": "Lakeshore Trail",
@@ -279,8 +279,8 @@ module.exports = function() {
 				{  
 					"name": "Rabbit Creek Trail",
 					"id": 0,
-					"mileage": 0,
-					"description": ""
+					"mileage": 7.8,
+					"description": "Large tulip tree at Scott Gap."
 				},
 				{  
 					"name": "Wet Bottom Trail",
@@ -303,8 +303,8 @@ module.exports = function() {
 				{  
 					"name": "Cooper Road Trail",
 					"id": 0,
-					"mileage": 0,
-					"description": ""
+					"mileage": 10.9,
+					"description": "Redbuds in March and early April."
 				},
 				{  
 					"name": "Little Bottoms Trail",
@@ -315,8 +315,8 @@ module.exports = function() {
 				{  
 					"name": "Hatcher Mountain Trail",
 					"id": 0,
-					"mileage": 0,
-					"description": ""
+					"mileage": 2.8,
+					"description": "Fringed polygala blooms in May."
 				},
 				{  
 					"name": "Beard Cane Trail",
@@ -959,8 +959,10 @@ module.exports = function() {
 				
 				var trailObject = trailItem[0];
 				
-				$('.info .trail-length').text("Mileage: " + trailObject.mileage);
-				$('.info .trail-description').text(trailObject.description);
+				if (trailObject) {
+					$('.info .trail-length').text("Mileage: " + trailObject.mileage);
+					$('.info .trail-description').text(trailObject.description);
+				}
 			});
 
 			$('body').on('mouseleave', '.extended-hover-range', function() {
